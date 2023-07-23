@@ -15,9 +15,9 @@ export class CreateFavoriteDto {
   @IsNotEmpty()
   readonly rating: number;
 
-  @IsString()
-  @MaxLength(300)
-  @IsNotEmpty()
+  // @IsString()
+  // @MaxLength(300)
+  // @IsNotEmpty()
   readonly thumbnail: string;
 
   @IsString()
