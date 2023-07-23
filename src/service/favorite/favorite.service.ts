@@ -25,6 +25,14 @@ export class FavoriteService {
     return book;
   }
 
+  async getUserBookById(bookId: string, userId:string): Promise<IFavorite> {
+    const book = await this.favoriteModel.findOne({
+      bookId,
+      userId
+    });
+    return book;
+  }
+
   async updateFavorite(
     FavoriteId: string,
     updateFavoriteDto: UpdateFavoriteDto,

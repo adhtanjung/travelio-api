@@ -26,10 +26,10 @@ export class FavoriteController {
     @Body() createFavoriteDto: CreateFavoriteDto,
   ) {
     try {
-      const book = await this.favoriteService.getByBookId(
+      const book = await this.favoriteService.getUserBookById(
         createFavoriteDto.bookId,
+        createFavoriteDto.userId
       );
-      console.log(book);
       if (book)
         throw new HttpException(
           'book already registered as your favorite',
