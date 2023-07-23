@@ -2,12 +2,12 @@ import { IsNotEmpty, IsNumber, IsString, MaxLength } from 'class-validator';
 
 export class CreateFavoriteDto {
   @IsString()
-  @MaxLength(30)
+  @MaxLength(100)
   @IsNotEmpty()
   readonly title: string;
 
   @IsString()
-  @MaxLength(30)
+  @MaxLength(100)
   @IsNotEmpty()
   readonly author: string;
 
@@ -16,7 +16,7 @@ export class CreateFavoriteDto {
   readonly rating: number;
 
   @IsString()
-  @MaxLength(30)
+  @MaxLength(300)
   @IsNotEmpty()
   readonly thumbnail: string;
 
