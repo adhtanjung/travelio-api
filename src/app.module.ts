@@ -5,14 +5,20 @@ import { AppService } from './app.service';
 import { FavoriteController } from './controller/student/favorite.controller';
 import { FavoritesSchema } from './schema/favorite.schema';
 import { FavoriteService } from './service/favorite/favorite.service';
+import { ConfigModule } from '@nestjs/config';
+require('dotenv').config();
 
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://adhtanjung:oOWgGDkrduH94gjh@travelio.ioleuxe.mongodb.net/',
+      process.env.MONGO_URL,
+
       { dbName: 'travelio' },
     ),
     MongooseModule.forFeature([{ name: 'Favorite', schema: FavoritesSchema }]),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
   ],
   controllers: [AppController, FavoriteController],
   providers: [AppService, FavoriteService],

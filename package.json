@@ -1,8 +1,7 @@
 {
-  "name": "nestjs-mongodb-crud",
+  "name": "travelio-api",
   "version": "0.0.1",
   "description": "",
-  "author": "Niranjan",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -22,6 +21,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/mapped-types": "^1.0.1",
     "@nestjs/mongoose": "^9.0.3",
